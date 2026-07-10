@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolha uma Unidade · C2W Connect2Work</title>
+  <meta name="description" content="Selecione a unidade Connect2Work mais conveniente para você." />
+
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/pages/unidades.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <a href="#" class="app-logo" aria-label="C2W Connect2Work">C2W</a>
+
+    <nav class="app-nav" aria-label="Navegação principal">
+      <a href="#" class="app-nav-link is-active" aria-current="page">Unidades</a>
+      <a href="#" class="app-nav-link">Meus Agendamentos</a>
+    </nav>
+
+    <div class="app-user" id="app-user">
+      <svg class="app-user-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span class="app-user-name" id="user-name">Usuário</span>
+    </div>
+  </header>
+
+  <main class="units-page">
+    <section class="units-hero">
+      <h1>Escolha uma <span class="text-accent">Unidade</span></h1>
+      <p class="units-subtitle">Selecione a unidade Connect2Work mais conveniente para você</p>
+    </section>
+
+    <section class="units-grid" id="units-grid" aria-label="Unidades disponíveis"></section>
+
+    <section class="benefits-section" aria-labelledby="benefits-heading">
+      <h2 id="benefits-heading">Por que escolher a <span class="text-accent">C2W</span>?</h2>
+
+      <div class="benefits-grid">
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3>Flexibilidade</h3>
+          <p>Reserve por hora, sem contratos longos ou burocracia</p>
+        </article>
+
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <h3>Infraestrutura</h3>
+          <p>Wi-Fi de alta velocidade, ar condicionado e equipamentos modernos</p>
+        </article>
+
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Networking</h3>
+          <p>Ambiente profissional para expandir sua rede de contatos</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../assets/js/pages/unidades.js"></script>
+</body>
+</html>

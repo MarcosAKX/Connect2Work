@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criar Conta · C2W Connect2Work</title>
+  <meta name="description" content="Crie sua conta C2W e reserve seu espaço de coworking." />
+
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/pages/login.css" />
+  <link rel="stylesheet" href="../assets/css/pages/cadastro.css" />
+</head>
+<body>
+
+  <main class="login-page cadastro-page">
+    <canvas class="network-bg" id="network-bg" aria-hidden="true"></canvas>
+    <div class="login-glow login-glow--top" aria-hidden="true"></div>
+    <div class="login-glow login-glow--bottom" aria-hidden="true"></div>
+
+    <div class="login-brand">
+      <div class="login-logo">
+        <span class="mark">Connect2<span>Work</span></span>
+      </div>
+      <p class="login-tagline">Crie sua conta e reserve seu espaço</p>
+    </div>
+
+    <section class="login-card card cadastro-card" aria-labelledby="cadastro-heading">
+      <div class="login-card-header">
+        <h1 id="cadastro-heading">Criar Conta</h1>
+        <p>Preencha os dados abaixo para se cadastrar</p>
+      </div>
+
+      <form id="cadastro-form" novalidate>
+        <div class="field">
+          <label for="full-name">Nome Completo</label>
+          <div class="field-input-wrap">
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              placeholder="Seu nome completo"
+              autocomplete="name"
+              maxlength="100"
+              required
+            />
+          </div>
+          <span class="field-error" id="full-name-error">Informe seu nome e sobrenome.</span>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <div class="field-input-wrap">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seu@email.com"
+              autocomplete="email"
+              inputmode="email"
+              maxlength="254"
+              required
+            />
+          </div>
+          <span class="field-error" id="email-error">Digite um e-mail válido.</span>
+        </div>
+
+        <div class="field">
+          <label for="profession">Profissão</label>
+          <div class="field-input-wrap">
+            <input
+              type="text"
+              id="profession"
+              name="profession"
+              placeholder="Ex: Desenvolvedor, Designer, Advogado"
+              autocomplete="organization-title"
+              maxlength="80"
+              required
+            />
+          </div>
+          <span class="field-error" id="profession-error">Informe sua profissão.</span>
+        </div>
+
+        <div class="field">
+          <label for="phone">Telefone</label>
+          <div class="field-input-wrap">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(00) 00000-0000"
+              autocomplete="tel"
+              inputmode="numeric"
+              required
+            />
+          </div>
+          <span class="field-error" id="phone-error">Digite um telefone válido.</span>
+        </div>
+
+        <div class="field">
+          <label for="password">Senha</label>
+          <div class="field-input-wrap">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Mínimo 6 caracteres"
+              autocomplete="new-password"
+              minlength="6"
+              maxlength="128"
+              required
+            />
+            <button
+              type="button"
+              class="toggle-visibility"
+              id="toggle-password"
+              aria-label="Mostrar senha"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="password-error">A senha deve ter pelo menos 6 caracteres.</span>
+        </div>
+
+        <div class="field">
+          <label for="confirm-password">Confirmar Senha</label>
+          <div class="field-input-wrap">
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirmPassword"
+              placeholder="Confirme sua senha"
+              autocomplete="new-password"
+              maxlength="128"
+              required
+            />
+            <button
+              type="button"
+              class="toggle-visibility"
+              id="toggle-confirm-password"
+              aria-label="Mostrar confirmação de senha"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="confirm-password-error">As senhas não coincidem.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submit-btn">
+          <span class="btn-label">Criar Conta</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+      </form>
+
+      <p class="login-footer">
+        Já tem uma conta?
+        <a href="login.html" class="text-link">Entrar</a>
+      </p>
+
+      <a href="login.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        Voltar para login
+      </a>
+    </section>
+  </main>
+
+  <script type="module" src="../assets/js/pages/cadastro.js"></script>
+</body>
+</html>
