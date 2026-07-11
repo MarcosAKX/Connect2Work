@@ -4,7 +4,7 @@
  * @property {string} name
  * @property {string} address
  * @property {number} availableRooms
- * @property {string} [imageUrl]
+ * @property {string | null} imageUrl
  */
 
 /** @type {Unit[]} */
@@ -14,12 +14,14 @@ export const units = [
     name: 'Connect2Work 1',
     address: 'Rua das Empresas, 100 - Centro',
     availableRooms: 5,
+    imageUrl: null,
   },
   {
     id: 'unit-2',
     name: 'Connect2Work 2',
     address: 'Av. dos Negócios, 500 - Zona Sul',
     availableRooms: 5,
+    imageUrl: null,
   },
 ];
 

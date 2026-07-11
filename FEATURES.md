@@ -20,7 +20,7 @@ Referência rápida de comportamento e regras de negócio. Aplicação em `cowor
 - Criação de perfil no cadastro (nome, e-mail, profissão, telefone): implementado (mock local) — `assets/js/mocks/database.js`
 - Criação de perfil no cadastro via Firestore: implementado — `assets/js/services/auth-service.js` (requer Firebase configurado)
 - Atualização de displayName no Firebase Auth: implementado — `assets/js/services/auth-service.js`
-- Exibição do usuário logado no header: implementado (mock local) — `assets/js/pages/unidades.js`, `assets/js/mocks/database.js`
+- Exibição do usuário logado no header: implementado (mock local) — `assets/js/pages/unidades.js`, `assets/js/pages/meus-agendamentos.js`, `assets/js/mocks/database.js`
 - Consulta ou edição de perfil após cadastro: planejado
 
 ## Validação de formulários
@@ -40,6 +40,7 @@ Referência rápida de comportamento e regras de negócio. Aplicação em `cowor
 
 - Banco mock em localStorage para autenticação: implementado — `assets/js/mocks/database.js`
 - Dados mockados de unidades de coworking: implementado — `assets/js/mocks/units.js`
+- Dados mockados de agendamentos de salas: implementado — `assets/js/mocks/bookings.js`
 - Configuração de Firebase Auth e Firestore: parcial — `assets/js/config/firebase.js` (template; requer preenchimento manual)
 - Detecção automática de Firebase configurado vs modo mock: implementado — `assets/js/config/firebase.js`, `assets/js/services/auth-service.js`
 
@@ -50,7 +51,7 @@ Referência rápida de comportamento e regras de negócio. Aplicação em `cowor
 - Seleção de unidade para agendamento: parcial — `pages/unidades.html` (layout pronto; navegação do card ainda não implementada)
 - Reserva e agendamento de salas: planejado
 - Gestão de disponibilidade e horários: planejado
-- Página "Meus Agendamentos": planejado
+- Página "Meus Agendamentos": implementado (mock local) — `pages/meus-agendamentos.html`, `assets/js/pages/meus-agendamentos.js`, `assets/js/mocks/bookings.js`
 
 ## Pagamentos
 <!-- Funcionalidade de cobrança pelas reservas — ainda não iniciada, apenas planejada. -->

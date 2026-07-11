@@ -16,14 +16,15 @@ function renderUnitCard(unit, displayNumber) {
     ? '1 sala disponível'
     : `${unit.availableRooms} salas disponíveis`;
 
-  const visualStyle = unit.imageUrl
-    ? `style="background-image: url('${unit.imageUrl}')"`
-    : '';
+  const visualContent = unit.imageUrl
+    ? `<img class="unit-card__image" src="${unit.imageUrl}" alt="" loading="lazy" />`
+    : `<span class="unit-card__glow" aria-hidden="true"></span>
+        <span class="unit-card__number">${displayNumber}</span>`;
 
   return `
     <article class="unit-card card" data-unit-id="${unit.id}">
-      <div class="unit-card__visual" ${visualStyle} aria-hidden="true">
-        <span class="unit-card__number">${displayNumber}</span>
+      <div class="unit-card__visual" aria-hidden="true">
+        ${visualContent}
       </div>
 
       <div class="unit-card__body">

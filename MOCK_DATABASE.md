@@ -34,10 +34,11 @@ Implementação: `coworking-site/assets/js/mocks/database.js`
 
 - `registerUser` — usado em `assets/js/pages/cadastro.js` quando Firebase não está configurado
 - `loginUser` — usado em `assets/js/pages/login.js` quando Firebase não está configurado
-- `getCurrentUser` — usado em `assets/js/pages/unidades.js` e disponível para demais telas autenticadas
+- `getCurrentUser` — usado em `assets/js/pages/unidades.js`, `assets/js/pages/meus-agendamentos.js` e disponível para demais telas autenticadas
 - `logoutUser` — disponível para encerrar sessão mock
 - `resetPassword` — usado em `assets/js/pages/recuperar-senha.js` quando Firebase não está configurado
 - `updatePassword` — uso manual via console para simular conclusão do reset
+- `getBookings`, `getBookingsByUserId`, `getBookingsByUserIdAndStatus`, `getBookingCounts` — usados em `assets/js/pages/meus-agendamentos.js`
 
 ## Usuário de teste (seed)
 <!-- Conta pré-criada automaticamente para facilitar testes manuais, sem precisar cadastrar um usuário novo toda hora. -->
@@ -54,3 +55,19 @@ Implementação: `coworking-site/assets/js/mocks/database.js`
 - `auth/user-not-found` — `updatePassword` para e-mail inexistente
 
 Mensagens exibidas nas telas via `mapAuthError` em `assets/js/services/auth-service.js`.
+
+## Unit
+<!-- Estrutura de dados de uma unidade de coworking listada na tela de unidades. -->
+
+- Descrição: unidade disponível para seleção pós-login
+- Campos: `id` (string), `name` (string), `address` (string), `availableRooms` (number), `imageUrl` (string | null)
+- Armazenamento: estático em `coworking-site/assets/js/mocks/units.js` (sem persistência local)
+- Status: `imageUrl` planejado para upload admin — implementado como fallback visual (número + glow) enquanto `null`
+
+## MockBooking
+<!-- Estrutura de dados de um agendamento de sala feito pelo usuário. -->
+
+- Descrição: reserva de sala vinculada a um usuário, unidade e horário
+- Campos: `id` (string), `userId` (string), `unitId` (string), `roomId` (string), `date` (string ISO date), `timeSlot` (string), `status` (`upcoming` | `past` | `cancelled`), `createdAt` (string ISO)
+- Armazenamento: `c2w_mock_bookings`
+- Status: temporário (mock) — será migrado para Firestore; listagem e tabs implementadas, fluxo de criação ainda planejado

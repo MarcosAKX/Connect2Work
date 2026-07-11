@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Agendamentos · C2W Connect2Work</title>
+  <meta name="description" content="Gerencie suas reservas de salas nas unidades Connect2Work." />
+
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/pages/meus-agendamentos.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <a href="unidades.html" class="app-logo" aria-label="C2W Connect2Work">C2W</a>
+
+    <nav class="app-nav" aria-label="Navegação principal">
+      <a href="unidades.html" class="app-nav-link">Unidades</a>
+      <a href="meus-agendamentos.html" class="app-nav-link is-active" aria-current="page">Meus Agendamentos</a>
+    </nav>
+
+    <div class="app-user" id="app-user">
+      <svg class="app-user-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span class="app-user-name" id="user-name">Usuário</span>
+    </div>
+  </header>
+
+  <main class="bookings-page">
+    <header class="bookings-header">
+      <div>
+        <h1>Meus <span class="text-accent">Agendamentos</span></h1>
+        <p class="bookings-subtitle">Gerencie suas reservas de salas</p>
+      </div>
+      <a href="unidades.html" class="btn btn-primary btn--inline bookings-header__action">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M12 5v14"/>
+          <path d="M5 12h14"/>
+        </svg>
+        Novo Agendamento
+      </a>
+    </header>
+
+    <div class="bookings-tabs" role="tablist" aria-label="Filtrar agendamentos">
+      <button type="button" class="bookings-tab is-active" role="tab" id="tab-upcoming" aria-selected="true" aria-controls="bookings-panel" data-status="upcoming">
+        Próximos <span class="bookings-tab__count" id="count-upcoming">(0)</span>
+      </button>
+      <button type="button" class="bookings-tab" role="tab" id="tab-past" aria-selected="false" aria-controls="bookings-panel" data-status="past">
+        Passados <span class="bookings-tab__count" id="count-past">(0)</span>
+      </button>
+      <button type="button" class="bookings-tab" role="tab" id="tab-cancelled" aria-selected="false" aria-controls="bookings-panel" data-status="cancelled">
+        Cancelados <span class="bookings-tab__count" id="count-cancelled">(0)</span>
+      </button>
+    </div>
+
+    <section class="bookings-panel" id="bookings-panel" role="tabpanel" aria-labelledby="tab-upcoming"></section>
+
+    <aside class="cancellation-notice" aria-labelledby="cancellation-heading">
+      <h2 id="cancellation-heading">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 8v4"/>
+          <path d="M12 16h.01"/>
+        </svg>
+        Política de Cancelamento
+      </h2>
+      <p>
+        Cancelamentos realizados com pelo menos 24 horas de antecedência recebem reembolso integral.
+        Cancelamentos feitos com menos de 24 horas de antecedência não são reembolsados.
+      </p>
+    </aside>
+  </main>
+
+  <script type="module" src="../assets/js/pages/meus-agendamentos.js"></script>
+</body>
+</html>
