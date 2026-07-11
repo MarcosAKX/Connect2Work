@@ -22,7 +22,7 @@ function renderUnitCard(unit, displayNumber) {
         <span class="unit-card__number">${displayNumber}</span>`;
 
   return `
-    <article class="unit-card card" data-unit-id="${unit.id}">
+    <a href="salas?unidade=${encodeURIComponent(unit.id)}" class="unit-card card" data-unit-id="${unit.id}" aria-label="Ver salas de ${unit.name}">
       <div class="unit-card__visual" aria-hidden="true">
         ${visualContent}
       </div>
@@ -30,12 +30,12 @@ function renderUnitCard(unit, displayNumber) {
       <div class="unit-card__body">
         <div class="unit-card__header">
           <h2 class="unit-card__name">${unit.name}</h2>
-          <button type="button" class="unit-card__action" aria-label="Ver ${unit.name}">
+          <span class="unit-card__action" aria-hidden="true">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
               <path d="M5 12h14"/>
               <path d="M13 6l6 6-6 6"/>
             </svg>
-          </button>
+          </span>
         </div>
 
         <p class="unit-card__meta">
@@ -54,6 +54,6 @@ function renderUnitCard(unit, displayNumber) {
           ${roomsLabel}
         </p>
       </div>
-    </article>
+    </a>
   `;
 }

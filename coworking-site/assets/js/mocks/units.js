@@ -5,6 +5,7 @@
  * @property {string} address
  * @property {number} availableRooms
  * @property {string | null} imageUrl
+ * @property {string} [description]
  */
 
 /** @type {Unit[]} */
@@ -15,6 +16,7 @@ export const units = [
     address: 'Rua das Empresas, 100 - Centro',
     availableRooms: 5,
     imageUrl: null,
+    description: 'Unidade no coração do Centro, com fácil acesso ao metrô e estacionamento conveniado.',
   },
   {
     id: 'unit-2',
@@ -22,6 +24,7 @@ export const units = [
     address: 'Av. dos Negócios, 500 - Zona Sul',
     availableRooms: 5,
     imageUrl: null,
+    description: 'Espaço moderno na Zona Sul, ideal para reuniões e trabalho em equipe.',
   },
 ];
 

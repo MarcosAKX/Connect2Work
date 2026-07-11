@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escolha uma Sala · C2W Connect2Work</title>
+  <meta name="description" content="Selecione a sala ideal para sua reserva na unidade Connect2Work." />
+
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/pages/salas.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <a href="unidades.html" class="app-logo" aria-label="C2W Connect2Work">C2W</a>
+
+    <nav class="app-nav" aria-label="Navegação principal">
+      <a href="unidades.html" class="app-nav-link is-active" aria-current="page">Unidades</a>
+      <a href="meus-agendamentos.html" class="app-nav-link">Meus Agendamentos</a>
+    </nav>
+
+    <div class="app-user" id="app-user">
+      <svg class="app-user-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span class="app-user-name" id="user-name">Usuário</span>
+    </div>
+  </header>
+
+  <main class="rooms-page">
+    <a href="unidades.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M19 12H5"/>
+        <path d="M12 19l-7-7 7-7"/>
+      </svg>
+      Voltar
+    </a>
+
+    <article class="unit-summary card" id="unit-summary" aria-label="Resumo da unidade"></article>
+
+    <section class="rooms-hero">
+      <h1>Escolha uma <span class="text-accent">Sala</span></h1>
+      <p class="rooms-subtitle">Selecione a sala ideal para sua reserva</p>
+    </section>
+
+    <section class="rooms-grid" id="rooms-grid" aria-label="Salas disponíveis"></section>
+  </main>
+
+  <script type="module" src="../assets/js/pages/salas.js"></script>
+</body>
+</html>

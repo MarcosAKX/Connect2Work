@@ -41,6 +41,7 @@ Referência rápida de comportamento e regras de negócio. Aplicação em `cowor
 - Banco mock em localStorage para autenticação: implementado — `assets/js/mocks/database.js`
 - Dados mockados de unidades de coworking: implementado — `assets/js/mocks/units.js`
 - Dados mockados de agendamentos de salas: implementado — `assets/js/mocks/bookings.js`
+- Dados mockados de salas por unidade: implementado — `assets/js/mocks/rooms.js`
 - Configuração de Firebase Auth e Firestore: parcial — `assets/js/config/firebase.js` (template; requer preenchimento manual)
 - Detecção automática de Firebase configurado vs modo mock: implementado — `assets/js/config/firebase.js`, `assets/js/services/auth-service.js`
 
@@ -48,7 +49,9 @@ Referência rápida de comportamento e regras de negócio. Aplicação em `cowor
 <!-- Funcionalidade de escolher uma unidade e reservar espaços/horários — parte já pronta (listagem) e parte ainda planejada (reserva em si). -->
 
 - Listagem de unidades de coworking: implementado (mock local) — `assets/js/pages/unidades.js`, `assets/js/mocks/units.js`
-- Seleção de unidade para agendamento: parcial — `pages/unidades.html` (layout pronto; navegação do card ainda não implementada)
+- Seleção de unidade para agendamento: implementado (mock local) — `assets/js/pages/unidades.js`, `assets/js/pages/salas.js`, `pages/salas.html` (`?unidade=<id>`)
+- Listagem de salas por unidade: implementado (mock local) — `pages/salas.html`, `assets/js/pages/salas.js`, `assets/js/mocks/rooms.js`
+- Edição de salas/unidades pelo admin: planejado
 - Reserva e agendamento de salas: planejado
 - Gestão de disponibilidade e horários: planejado
 - Página "Meus Agendamentos": implementado (mock local) — `pages/meus-agendamentos.html`, `assets/js/pages/meus-agendamentos.js`, `assets/js/mocks/bookings.js`

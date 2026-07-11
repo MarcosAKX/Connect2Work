@@ -39,6 +39,7 @@ Implementação: `coworking-site/assets/js/mocks/database.js`
 - `resetPassword` — usado em `assets/js/pages/recuperar-senha.js` quando Firebase não está configurado
 - `updatePassword` — uso manual via console para simular conclusão do reset
 - `getBookings`, `getBookingsByUserId`, `getBookingsByUserIdAndStatus`, `getBookingCounts` — usados em `assets/js/pages/meus-agendamentos.js`
+- `getRooms`, `getRoomsByUnitId`, `getRoomById` — usados em `assets/js/pages/salas.js`
 
 ## Usuário de teste (seed)
 <!-- Conta pré-criada automaticamente para facilitar testes manuais, sem precisar cadastrar um usuário novo toda hora. -->
@@ -60,9 +61,17 @@ Mensagens exibidas nas telas via `mapAuthError` em `assets/js/services/auth-serv
 <!-- Estrutura de dados de uma unidade de coworking listada na tela de unidades. -->
 
 - Descrição: unidade disponível para seleção pós-login
-- Campos: `id` (string), `name` (string), `address` (string), `availableRooms` (number), `imageUrl` (string | null)
+- Campos: `id` (string), `name` (string), `address` (string), `availableRooms` (number), `imageUrl` (string | null), `description` (string, opcional)
 - Armazenamento: estático em `coworking-site/assets/js/mocks/units.js` (sem persistência local)
-- Status: `imageUrl` planejado para upload admin — implementado como fallback visual (número + glow) enquanto `null`
+- Status: `imageUrl` e `description` planejados para edição admin — `imageUrl` com fallback visual implementado; CRUD admin ainda planejado
+
+## MockRoom
+<!-- Estrutura de dados de uma sala disponível para reserva em uma unidade. -->
+
+- Descrição: sala de coworking vinculada a uma unidade, com preço e comodidades
+- Campos: `id` (string), `unitId` (string), `name` (string), `capacity` (number), `pricePerHour` (number), `amenities` (string[]), `imageUrl` (string | null)
+- Armazenamento: estático em `coworking-site/assets/js/mocks/rooms.js` (sem persistência local)
+- Status: `imageUrl` planejado para upload admin — implementado como fallback visual (nome sobre fundo escuro) enquanto `null`; seleção para reserva ainda planejada
 
 ## MockBooking
 <!-- Estrutura de dados de um agendamento de sala feito pelo usuário. -->
