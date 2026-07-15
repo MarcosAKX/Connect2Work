@@ -1,0 +1,33 @@
+---
+description: Decisões não óbvias do projeto que não devem ser revertidas sem querer
+alwaysApply: true
+---
+
+# Rota de salas.html sem extensão
+
+Links internos para a página de salas usam `salas?unidade={id}`, SEM a
+extensão `.html`. Isso é intencional: o servidor de desenvolvimento (`serve`)
+faz um redirect 301 de `salas.html` para `/salas` que remove a query string,
+quebrando o parâmetro `unidade`.
+
+**Não reverter esse link para `.html`.** Se notar esse padrão e parecer um
+erro, não "corrigir" — é proposital.
+
+Ao configurar hosting de produção (Firebase Hosting, Netlify, etc.),
+revalidar esse comportamento, pois o redirecionamento pode se comportar
+diferente lá — isso pode exigir revisão desta regra.
+
+# Mock local vs Firebase
+
+O projeto detecta automaticamente se o Firebase está configurado
+(`assets/js/config/firebase.js`) e cai para o mock local
+(`assets/js/mocks/database.js`) quando não está. Ao adicionar uma
+funcionalidade nova de autenticação/dados, implementar os dois caminhos
+sempre que fizer sentido — não implementar só no mock ou só no Firebase sem
+avisar.
+
+# Usuário de teste (seed)
+
+Existe um usuário de teste criado automaticamente no mock:
+`teste@connect2work.com` / `123456`. Não remover essa seed sem substituir por
+outra forma de teste rápido.

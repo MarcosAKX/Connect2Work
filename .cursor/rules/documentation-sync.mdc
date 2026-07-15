@@ -1,0 +1,33 @@
+---
+description: Manter FEATURES.md, PROJECT_STRUCTURE.md e MOCK_DATABASE.md sincronizados com o código
+alwaysApply: true
+---
+
+# Antes de começar qualquer tarefa
+
+Ler `FEATURES.md`, `PROJECT_STRUCTURE.md` e `MOCK_DATABASE.md` na raiz do
+projeto para entender o que já existe, o que é mock e o que ainda está
+planejado. Não reimplementar algo que já existe. Se uma mudança exigir
+alterar algo já implementado, avisar antes de fazer.
+
+# Ao concluir uma tarefa
+
+Sempre que criar, alterar ou remover arquivos, atualizar os `.md` relevantes
+na mesma resposta, sem esperar ser pedido:
+
+- Novo arquivo de página/componente/serviço → adicionar em
+  `PROJECT_STRUCTURE.md`
+- Nova funcionalidade ou mudança de status (planejado → implementado) →
+  atualizar `FEATURES.md`
+- Mudança em estrutura de dados mockada (novos campos, novas entidades,
+  novas funções expostas) → atualizar `MOCK_DATABASE.md`
+
+# Regras de status
+
+- Nunca marcar algo como "implementado" sem ter sido de fato implementado e
+  testável.
+- Se a implementação usa mock local (localStorage) em vez de Firebase real,
+  manter explícito "(mock local)" — nunca omitir essa distinção.
+- Ao migrar algo de mock para Firebase real, atualizar o status no
+  `FEATURES.md` e mover a estrutura correspondente para longe de
+  `MOCK_DATABASE.md` (ou marcar como substituída).
